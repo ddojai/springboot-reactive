@@ -1,7 +1,8 @@
 package io.github.ddojai.springboot.reactive;
 
+import org.springframework.data.repository.query.ReactiveQueryByExampleExecutor;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 
-public interface ItemRepository extends ReactiveCrudRepository<Item, String> {
+public interface ItemRepository extends ReactiveCrudRepository<Item, String>, ReactiveQueryByExampleExecutor<Item> {
 
 }
