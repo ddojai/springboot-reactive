@@ -1,0 +1,12 @@
+spring:
+  webflux:
+    hiddenmethod:
+      filter:
+        enabled: true
+  devtools:
+    restart:
+      enabled: true
+      exclude: static/**,public/**
+#logging:
+#  level:
+#    web: DEBUG

@@ -2,21 +2,30 @@ package io.github.ddojai.springboot.reactive;
 
 import java.util.Objects;
 
-public class CartItem {
+/**
+ * @author Greg Turnquist
+ */
+// tag::code[]
+class CartItem {
 
     private Item item;
     private int quantity;
 
-    private CartItem() {
-    }
+    private CartItem() {}
 
     CartItem(Item item) {
         this.item = item;
         this.quantity = 1;
     }
 
+    // end::code[]
+
     public void increment() {
         this.quantity++;
+    }
+
+    public void decrement() {
+        this.quantity--;
     }
 
     public Item getItem() {

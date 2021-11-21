@@ -1,27 +1,31 @@
 package io.github.ddojai.springboot.reactive;
 
+import org.springframework.data.annotation.Id;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import org.springframework.data.annotation.Id;
 
-public class Cart {
+/**
+ * @author Greg Turnquist
+ */
+// tag::code[]
+class Cart {
 
-    @Id
-    private String id;
+    private @Id String id;
     private List<CartItem> cartItems;
 
-    private Cart() {
-    }
+    private Cart() {}
 
     public Cart(String id) {
         this(id, new ArrayList<>());
     }
 
-    public Cart(String id, ArrayList<CartItem> cartItems) {
+    public Cart(String id, List<CartItem> cartItems) {
         this.id = id;
         this.cartItems = cartItems;
     }
+    // end::code[]
 
     public String getId() {
         return id;

@@ -1,0 +1,8 @@
+spring:
+  webflux:
+    hiddenmethod:
+      filter:
+        enabled: true
+  devtools:
+    restart:
+      enabled: false
